@@ -43,11 +43,6 @@ const EducationalPanel = () => {
                 <p>The AI <strong className="text-neon-yellow">maximizes</strong> its own score and <strong className="text-neon-red">minimizes</strong> the opponent's best outcome, alternating at each tree level.</p>
               </div>
 
-              <div>
-                <h4 className="font-display text-xs text-foreground mb-1">Step 4: Alpha-Beta Pruning</h4>
-                <p>Branches that can't affect the final decision are cut, drastically reducing computation. This is why Hard mode (depth 5) remains fast.</p>
-              </div>
-
               {/* Simple diagram */}
               <div className="glass-panel p-3 text-center text-xs">
                 <div className="font-display text-foreground mb-2">Decision Tree Example</div>

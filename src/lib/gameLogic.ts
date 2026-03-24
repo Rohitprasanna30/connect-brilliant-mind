@@ -186,7 +186,7 @@ export function getAIMove(board: Board, difficulty: Difficulty, aiPlayer: Player
       scores.push({ column: col, score: -Infinity, valid: false });
       continue;
     }
-    const score = minimax(result.newBoard, depth - 1, -Infinity, Infinity, false, aiPlayer);
+    const score = minimax(result.newBoard, depth - 1, false, aiPlayer);
     scores.push({ column: col, score, valid: true });
     if (score > bestScore) {
       bestScore = score;
