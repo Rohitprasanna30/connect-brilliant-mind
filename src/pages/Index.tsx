@@ -166,7 +166,7 @@ const Index = () => {
           <Sparkles className="w-5 h-5 sm:w-7 sm:h-7" />
         </h1>
         <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-          Minimax AI with Alpha-Beta Pruning
+          Minimax AI
         </p>
       </motion.div>
 
