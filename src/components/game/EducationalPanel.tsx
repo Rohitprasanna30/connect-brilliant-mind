@@ -64,9 +64,9 @@ const EducationalPanel = () => {
                       <div className="w-px h-2 bg-border" />
                       <div className="flex gap-2">
                         <span className="px-1.5 py-0.5 rounded bg-secondary text-[10px]">+7</span>
-                        <span className="px-1.5 py-0.5 rounded bg-neon-green/20 border border-neon-green/40 text-[10px]">✂ pruned</span>
+                        <span className="px-1.5 py-0.5 rounded bg-secondary text-[10px]">+2</span>
                       </div>
-                      <span className="text-[10px] mt-1 text-neon-red">≤ +7</span>
+                      <span className="text-[10px] mt-1 text-neon-red">picks +2</span>
                     </div>
                   </div>
                   <span className="text-[10px] mt-1 text-neon-blue">AI picks +7 branch → Best move!</span>
