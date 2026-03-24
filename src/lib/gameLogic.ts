@@ -123,7 +123,7 @@ function isTerminal(board: Board): boolean {
 let nodesExplored = 0;
 
 function minimax(
-  board: Board, depth: number, alpha: number, beta: number,
+  board: Board, depth: number,
   maximizing: boolean, aiPlayer: Player
 ): number {
   nodesExplored++;
@@ -143,10 +143,8 @@ function minimax(
     for (const col of validCols) {
       const result = dropDisc(board, col, aiPlayer);
       if (!result) continue;
-      const ev = minimax(result.newBoard, depth - 1, alpha, beta, false, aiPlayer);
+      const ev = minimax(result.newBoard, depth - 1, false, aiPlayer);
       maxEval = Math.max(maxEval, ev);
-      alpha = Math.max(alpha, ev);
-      if (beta <= alpha) break;
     }
     return maxEval;
   } else {
@@ -154,10 +152,8 @@ function minimax(
     for (const col of validCols) {
       const result = dropDisc(board, col, opponent);
       if (!result) continue;
-      const ev = minimax(result.newBoard, depth - 1, alpha, beta, true, aiPlayer);
+      const ev = minimax(result.newBoard, depth - 1, true, aiPlayer);
       minEval = Math.min(minEval, ev);
-      beta = Math.min(beta, ev);
-      if (beta <= alpha) break;
     }
     return minEval;
   }
